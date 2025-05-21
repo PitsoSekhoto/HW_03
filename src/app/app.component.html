@@ -1,0 +1,32 @@
+<mat-drawer-container class="sidenav-container">
+  <mat-drawer #drawer class="sidenav" [mode]="'side'" [opened]="authService.isLoggedIn()">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/products" routerLinkActive="active">
+        <mat-icon>list</mat-icon>
+        Product Listing
+      </a>
+      <a mat-list-item routerLink="/add-product" routerLinkActive="active">
+        <mat-icon>add</mat-icon>
+        Add Product
+      </a>
+      <a mat-list-item routerLink="/dashboard" routerLinkActive="active">
+        <mat-icon>dashboard</mat-icon>
+        Dashboard
+      </a>
+      <a mat-list-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        Logout
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <mat-toolbar color="primary">
+      <span>{{ title }}</span>
+    </mat-toolbar>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

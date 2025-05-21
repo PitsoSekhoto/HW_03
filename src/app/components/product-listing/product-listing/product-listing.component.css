@@ -1,0 +1,41 @@
+.product-listing-container {
+  padding: 20px;
+}
+
+.filter-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.product-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.mat-column-image {
+  width: 80px;
+  max-width: 80px;
+}
+
+.mat-column-price {
+  width: 120px;
+  max-width: 120px;
+}
+
+th.mat-header-cell {
+  font-weight: bold;
+}
+
+mat-paginator {
+  margin-top: 20px;
+}
